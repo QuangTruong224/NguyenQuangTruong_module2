@@ -1,7 +1,7 @@
 package ss6_ke_thua.thuc_hanh;
 
 public class Circle extends Shape {
-    private double radius = 1.5;
+    public double radius = 1.5;
 
     public Circle() {
     }
@@ -9,6 +9,9 @@ public class Circle extends Shape {
     public Circle(String color, boolean filled, double radius) {
         super(color, filled);
         this.radius = radius;
+    }
+
+    public Circle(double radius) {
     }
 
     public double getRadius() {
