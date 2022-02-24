@@ -1,16 +1,16 @@
-package Ss2_vong_lap_trong_jav.Bai_tap;
+package ss2_vong_lap_trong_jav.Bai_tap;
 
 import java.util.Scanner;
 
 public class hien_thi_so_nguyen_to_nho_hon_100 {
     public static void main(String[] args) {
-        Scanner scanner= new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("nhập n số nguyên ");
         int n;
-        for (int i=0;i<100;i++) {
+        for (int i = 0; i < 100; i++) {
 
-            if(kiemTraSNT(i)) {
-                System.out.print(i+ " ");
+            if (kiemTraSNT(i)) {
+                System.out.print(i + " ");
             }
         }
 

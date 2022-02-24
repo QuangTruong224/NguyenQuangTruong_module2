@@ -1,6 +1,7 @@
-package Ss1_Introduction_to_Jav.Thuc_hanh;
+package ss1_Introduction_to_Jav.Thuc_hanh;
 
 import java.util.Scanner;
+
 public class tinh_so_ngay_trong_thang {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

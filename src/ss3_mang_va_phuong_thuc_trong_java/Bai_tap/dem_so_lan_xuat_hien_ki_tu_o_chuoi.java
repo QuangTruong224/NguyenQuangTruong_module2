@@ -1,4 +1,4 @@
-package Ss3_Mang_va_phupng_thuc_trong_java.Bai_tap;
+package ss3_mang_va_phuong_thuc_trong_java.Bai_tap;
 import java.util.Scanner;
 public class dem_so_lan_xuat_hien_ki_tu_o_chuoi {
     public static void main(String[] args) {

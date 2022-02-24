@@ -1,4 +1,4 @@
-package Ss2_vong_lap_trong_jav.Thuc_hanh;
+package ss2_vong_lap_trong_jav.Thuc_hanh;
 import java.util.Scanner;
 public class uoc_chung_so_lon_nhat {
     public static void main(String[] args) {

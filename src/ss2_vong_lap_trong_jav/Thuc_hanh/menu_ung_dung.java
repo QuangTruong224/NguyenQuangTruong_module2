@@ -1,4 +1,4 @@
-package Ss2_vong_lap_trong_jav.Thuc_hanh;
+package ss2_vong_lap_trong_jav.Thuc_hanh;
 import java.util.Scanner;
 
 public class menu_ung_dung {

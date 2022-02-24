@@ -1,4 +1,4 @@
-package Ss1_Introduction_to_Jav.Thuc_hanh;
+package ss1_Introduction_to_Jav.Thuc_hanh;
 import java.util.Scanner;
 public class chi_so_can_nang {
     public static void main(String[] args) {

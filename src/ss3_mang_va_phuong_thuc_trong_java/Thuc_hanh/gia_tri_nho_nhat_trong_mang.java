@@ -1,4 +1,4 @@
-package Ss3_Mang_va_phupng_thuc_trong_java.Thuc_hanh;
+package ss3_mang_va_phuong_thuc_trong_java.Thuc_hanh;
 
 public class gia_tri_nho_nhat_trong_mang {
         public static void main(String[] args) {

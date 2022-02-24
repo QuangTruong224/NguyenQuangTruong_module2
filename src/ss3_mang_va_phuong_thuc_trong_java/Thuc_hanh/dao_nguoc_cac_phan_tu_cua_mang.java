@@ -1,4 +1,4 @@
-package Ss3_Mang_va_phupng_thuc_trong_java.Thuc_hanh;
+package ss3_mang_va_phuong_thuc_trong_java.Thuc_hanh;
 import java.util.Scanner;
 
 class dao_nguoc_cac_phan_tu_mang {

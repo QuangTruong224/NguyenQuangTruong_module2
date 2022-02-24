@@ -1,4 +1,4 @@
-package Ss2_vong_lap_trong_jav.Bai_tap;
+package ss2_vong_lap_trong_jav.Bai_tap;
 import java.util.Scanner;
 public class hien_thi_20_so_nguyen_to {
     public static void main(String[] args) {

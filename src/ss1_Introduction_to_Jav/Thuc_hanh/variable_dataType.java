@@ -1,4 +1,4 @@
-package Ss1_Introduction_to_Jav.Thuc_hanh;
+package ss1_Introduction_to_Jav.Thuc_hanh;
 public class variable_dataType {
     public static void main(String[] args) {
         int i=10;

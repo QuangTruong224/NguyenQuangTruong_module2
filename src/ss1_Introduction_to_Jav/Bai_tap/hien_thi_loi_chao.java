@@ -1,4 +1,4 @@
-package Ss1_Introduction_to_Jav.Bai_tap;
+package ss1_Introduction_to_Jav.Bai_tap;
 import java.util.Scanner;
 
 public class hien_thi_loi_chao {

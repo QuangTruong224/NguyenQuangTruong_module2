@@ -1,4 +1,4 @@
-package Ss3_Mang_va_phupng_thuc_trong_java.Bai_tap;
+package ss3_mang_va_phuong_thuc_trong_java.Bai_tap;
 import java.util.Scanner;
 public class tong_cac_so_mot_cot {
     public static void main(String[] args) {

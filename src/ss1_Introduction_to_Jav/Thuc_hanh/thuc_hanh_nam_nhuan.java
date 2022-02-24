@@ -1,4 +1,4 @@
-package Ss1_Introduction_to_Jav.Thuc_hanh;
+package ss1_Introduction_to_Jav.Thuc_hanh;
 import java.util.Scanner;
 public class thuc_hanh_nam_nhuan {
     public static void main(String[] args) {

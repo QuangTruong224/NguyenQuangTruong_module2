@@ -1,4 +1,4 @@
-package Ss7_Abstract_Class_Interface.Thuc_hanh.animal_interface_edible;
+package ss7_abstract_interface.thuc_hanh.animal_interface_edible;
 
     public class Tiger extends Animal {
         public String makeSound() {
