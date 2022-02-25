@@ -1,4 +1,4 @@
-package Ss7_Abstract_Class_Interface.Bai_tap.colorable;
+package ss7_abstract_interface.bai_tap.colorable;
 
 public class TestColorable {
     public static void main(String[] args) {
