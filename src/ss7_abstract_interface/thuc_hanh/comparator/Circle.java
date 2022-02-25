@@ -1,4 +1,4 @@
-package ss7_abstract_interface.thuc_hanh.Comparator;
+package ss7_abstract_interface.thuc_hanh.comparator;
 public class Circle extends Shape {
     private double radius = 1.0;
 

@@ -1,4 +1,4 @@
-package ss7_abstract_interface.thuc_hanh.Comparator;
+package ss7_abstract_interface.thuc_hanh.comparator;
 
 import java.util.Arrays;
 import java.util.Comparator;
