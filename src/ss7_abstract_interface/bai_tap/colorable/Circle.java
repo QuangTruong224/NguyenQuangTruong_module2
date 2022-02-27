@@ -2,7 +2,8 @@ package ss7_abstract_interface.bai_tap.colorable;
 
 public class Circle extends Shape {
     private double radius = 2;
-    public Circle(){
+
+    public Circle() {
 
     }
 
