@@ -22,19 +22,17 @@ public class VehicleTest {
                     break;
                 case 2:
                     Vehicle vehicle2 = new Vehicle();
-                    System.out.println("Tiền thuế trước bạ:");
-                    vehicle2.setPhanPhoi(scanner.nextInt());
                     System.out.println("Nhập phân phối xe:");
                     vehicle2.setPhanPhoi(scanner.nextInt());
                     System.out.println("Nhập giá tiền mua:");
                     vehicle2.setGiaXe(scanner.nextInt());
                     System.out.println("Thuế trước bạ:");
                     if (vehicle2.getPhanPhoi() > 200) {
-                        System.out.println(vehicle2.thueTren200cc() * vehicle2.getGiaXe());
+                        System.out.println(vehicle2.giaXe* vehicle2.thueTren200cc());
                     } else if (vehicle2.getPhanPhoi() > 100) {
-                        System.out.println(vehicle2.thueDuoi200cc() * vehicle2.getGiaXe());
+                        System.out.println(vehicle2.giaXe* vehicle2.thueDuoi200cc());
                     } else {
-                        System.out.println(vehicle2.thueDuoi100cc());
+                        System.out.println(vehicle2.thueDuoi100cc()*vehicle2.giaXe);
                     }
                     break;
                 default:
