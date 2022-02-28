@@ -1,5 +1,5 @@
 package ss7_abstract_interface.bai_tap.colorable;
-public class Square extends Shape{
+public class Square extends Shape implements Colorable{
     private double side;
 
     public double getSide() {
@@ -30,4 +30,8 @@ public class Square extends Shape{
                 '}';
     }
 
+    @Override
+    public void howToColor() {
+
+    }
 }
