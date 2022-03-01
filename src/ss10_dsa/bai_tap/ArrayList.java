@@ -18,11 +18,9 @@ public class ArrayList<E> {
             throw new IllegalArgumentException("capacity: " + capacity);
         }
     }
-
     public int getSize() {
         return this.size;
     }
-
     public void clear() {
         size = 0;
         for (Object i : elements) {
@@ -38,7 +36,6 @@ public class ArrayList<E> {
         size++;
         return true;
     }
-
     public void ensureCapacity(int minCapacity) {
         if (minCapacity > 0) {
             int newCapacity = this.elements.length + minCapacity;
@@ -67,7 +64,6 @@ public class ArrayList<E> {
         }
 
     }
-
     public E get(int index) {
         return (E) elements[index];
     }
