@@ -6,7 +6,7 @@ public class TaiKhoan {
     private long soTaiKhoan;
     private String tenTaiKhoan;
     private double soTien = 50;
-    public final double LAISUAT = 0.035;
+    public final double laiSuat = 0.035;
     public double napTien;
     public double rutTien;
 
@@ -48,13 +48,24 @@ public class TaiKhoan {
         this.soTien = soTien;
     }
 
-    public double napTien() {
-    return getSoTien()+napTien;
-    }
-    public double rutTien() {
-        return getSoTien();
+    public double napTien(double napTien){
+        this.setSoTien(soTien+napTien);
+        return this.getSoTien();
     }
 
+    public double rutTien(double rutTien){
+        if (soTien>=rutTien&& rutTien>0){
+            this.setSoTien(soTien-rutTien);
+            return this.getSoTien();
+        } else {
+            return -1;
+        }
+    }
+
+    public double daoHan(){
+        this.setSoTien(soTien+soTien*laiSuat);
+        return this.getSoTien();
+    }
     @Override
     public String toString() {
         return "TaiKhoan{" +
