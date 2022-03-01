@@ -7,7 +7,7 @@ public class DaoNguocPhanTuMang {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Stack<Integer> stack = new Stack<>();
-        System.out.println("Nhập n số phần tử của mảng: ");
+        System.out.println("Nhập n phần tử: ");
         int n = scanner.nextInt();
         int[] arr = new int[n];
         for (int i = 0; i < arr.length; i++) {
