@@ -43,8 +43,8 @@ public class otoImpl implements OtoService {
             if (otoList.get(i).getBienKiemSoat().equals(xoaBienSo)) {
                 check=true;
                 System.out.println("Bạn có muốn xóa không:");
-                System.out.println("1.Có lắm lung");
-                System.out.println("2.Hong bé ơi");
+                System.out.println("1.Có");
+                System.out.println("2.Không");
                 int choice=Integer.parseInt(scanner.nextLine());
                 switch (choice) {
                     case 1:
