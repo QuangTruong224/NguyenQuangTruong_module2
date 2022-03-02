@@ -13,15 +13,15 @@ public class Menu {
         boolean check = true;
         int choice = 0;
         while (check) {
-            System.out.println("--------MENU---------");
-            System.out.println("1. Thêm sản phẩm: ");
-            System.out.println("2. Sửa sản phảm: ");
-            System.out.println("3. Xoá sản phẩm: ");
-            System.out.println("4. Hiển thị sản phẩm: ");
-            System.out.println("5. Tìm kiếm sản phẩm: ");
-            System.out.println("6. Sắp xếp sản phẩm tăng dần: ");
-            System.out.println("7. Sắp xếp sản phẩm giảm dần: ");
-            System.out.println("8.Thoát! ");
+            System.out.println("QUẢN LÍ SẢN PHẨM");
+            System.out.println("1.Thêm sản phẩm:");
+            System.out.println("2.Sửa sản phảm:");
+            System.out.println("3.Xoá sản phẩm:");
+            System.out.println("4.Hiển thị sản phẩm:");
+            System.out.println("5.Tìm kiếm sản phẩm:");
+            System.out.println("6.Sắp xếp sản phẩm tăng dần:");
+            System.out.println("7.Sắp xếp sản phẩm giảm dần:");
+            System.out.println("8.Thoát");
             try {
 
                 choice = Integer.parseInt(scanner.nextLine());
