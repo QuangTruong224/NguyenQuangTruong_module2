@@ -1,7 +1,6 @@
 package ss12_java_collection_framework.bai_tap;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
