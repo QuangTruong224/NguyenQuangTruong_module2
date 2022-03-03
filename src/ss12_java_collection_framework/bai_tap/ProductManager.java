@@ -70,7 +70,6 @@ public class ProductManager implements ProductService {
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getTen().equals(tenTimKiem)) {
                 productList.contains(i);
-
                 System.out.println("Đã tìm kiếm thành công");
                 System.out.println(productList.get(i));
             }
