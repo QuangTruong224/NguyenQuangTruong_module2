@@ -1,6 +1,7 @@
 package ss12_java_collection_framework.bai_tap;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -78,9 +79,18 @@ public class ProductManager implements ProductService {
 
     @Override
     public void increaseProduct() {
+        productList.sort(Product::compareTo);
+        for (Product product : productList)
+            System.out.println(product);
 
     }
+
     @Override
     public void decreaseProduct() {
+        DecreaseProduct decreaseProduct = new DecreaseProduct();
+        Collections.sort(productList, decreaseProduct);
+        for (Product product1 : productList) {
+            System.out.println(product1);
+        }
     }
 }

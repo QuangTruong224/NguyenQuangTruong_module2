@@ -1,5 +1,8 @@
 package ss12_java_collection_framework.bai_tap;
-public class Product{
+
+import java.util.Comparator;
+
+public class Product implements Comparable<Product> {
     private int id;
     private String ten;
     private int gia;
@@ -44,5 +47,10 @@ public class Product{
                 ", ten='" + ten + '\'' +
                 ", gia=" + gia +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return this.getGia() - o.getGia();
     }
 }
