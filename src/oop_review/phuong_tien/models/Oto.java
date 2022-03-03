@@ -1,6 +1,6 @@
 package oop_review.phuong_tien.models;
 
-public class Oto extends PhuongTien{
+public class Oto extends PhuongTien {
     private int soChoNgoi;
     private String kieuXe;
 
@@ -39,6 +39,6 @@ public class Oto extends PhuongTien{
                 ", chuSoHuu='" + getChuSoHuu() + '\'' +
                 "soChoNgoi=" + soChoNgoi +
                 ", kieuXe='" + kieuXe + '\'' +
-                "} " ;
+                "} ";
     }
 }
