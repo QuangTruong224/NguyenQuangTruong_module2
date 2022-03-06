@@ -28,15 +28,15 @@ public class congNhanImpl implements congNhanService {
 
     @Override
     public void searchCongNhan() {
-        boolean check = true;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập tên công nhân cần tìm");
         String tenTimKiem = scanner.nextLine();
         for (int i = 0; i < congNhanList.size(); i++) {
-            if (check=congNhanList.get(i).getHoTen().equals(tenTimKiem)) {
+            if (congNhanList.get(i).getHoTen().equals(tenTimKiem)) {
 
                 System.out.println("Đã tìm kiếm thành công");
                 System.out.println(congNhanList.get(i));
+                break;
             }
 
         }

@@ -30,15 +30,15 @@ public class nhanVienImpl implements nhanVienService {
 
     @Override
     public void searchNhanVien() {
-        boolean check = true;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập tên nhân viên cần tìm");
         String tenTimKiem = scanner.nextLine();
         for (int i = 0; i < nhanVienList.size(); i++) {
-            if (check=nhanVienList.get(i).getHoTen().equals(tenTimKiem))
+            if (nhanVienList.get(i).getHoTen().equals(tenTimKiem))
 
             System.out.println("Đã tìm kiếm thành công");
             System.out.println(nhanVienList.get(i));
+            break;
 
         }
     }

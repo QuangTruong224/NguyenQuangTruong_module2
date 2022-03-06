@@ -42,7 +42,7 @@ public class ProductManager implements ProductService {
 
     @Override
     public void deleteProduct() {
-        boolean check = false;
+//        boolean check = false;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập id sản phẩm cần xóa nào");
         int idDelete = Integer.parseInt(scanner.nextLine());
@@ -63,13 +63,13 @@ public class ProductManager implements ProductService {
 
     @Override
     public void searchProduct() {
-        boolean check = false;
+//        boolean check = false;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập tên sản phẩm cần tìm");
         String tenTimKiem = scanner.nextLine();
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getTen().equals(tenTimKiem)) {
-                productList.contains(i);
+//                productList.contains(i);
                 System.out.println("Đã tìm kiếm thành công");
                 System.out.println(productList.get(i));
             }

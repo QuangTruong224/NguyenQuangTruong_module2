@@ -31,15 +31,15 @@ public class kySuImpl implements kySuService {
 
     @Override
     public void searchKySu() {
-        boolean check = true;
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập tên kỹ sư cần tìm");
-        String tenTimKiem=scanner.nextLine();
+        String tenTimKiem = scanner.nextLine();
         for (int i = 0; i < kySuList.size(); i++) {
-            if (check=kySuList.get(i).getHoTen().equals(tenTimKiem))
-//            kySuList.contains(i);
-            System.out.println("Đã tìm kiếm thành công");
+            if (kySuList.get(i).getHoTen().equals(tenTimKiem))
+                System.out.println("Đã tìm kiếm thành công");
             System.out.println(kySuList.get(i));
+            break;
 
         }
 
