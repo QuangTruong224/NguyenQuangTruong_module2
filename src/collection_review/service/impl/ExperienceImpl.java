@@ -2,6 +2,7 @@ package collection_review.service.impl;
 
 import collection_review.models.Experience;
 import collection_review.service.ExperienceService;
+//import collection_review.utils.Validate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Scanner;
 
 public class ExperienceImpl implements ExperienceService {
     static List<Experience> experienceList = new ArrayList<>();
+//    Validate  validate = new Validate();
 
     @Override
     public void addExperience() {

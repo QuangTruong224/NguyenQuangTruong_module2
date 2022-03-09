@@ -12,12 +12,40 @@ public class congNhanImpl implements congNhanService {
     public void addCongNhan() {
 //        String hoTen, int namSinh, String gioiTinh, String diaChi, String bacCap
         Scanner scanner=new Scanner(System.in);
-        System.out.println("Nhập họ tên công nhân cần thêm mới");
-        String hoTen=scanner.nextLine();
-        System.out.println("Nhập năm sinh công nhân cần thêm mới");
-        int namSinh=Integer.parseInt(scanner.nextLine());
-        System.out.println("NHập giới tính công nhân cần thêm mới");
-        String gioiTinh=scanner.nextLine();
+        String hoTen ;
+        while (true){
+
+                System.out.println("Nhập họ tên công nhân cần thêm mới");
+                hoTen =scanner.nextLine();
+                if ( hoTen.trim().equals("") ){
+                    System.out.println("nhập lại");
+            }else {
+                    break;
+                }
+        }
+
+        int namSinh ;
+        do {
+            try {
+                System.out.println("Nhập năm sinh công nhân cần thêm mới");
+                namSinh = Integer.parseInt(scanner.nextLine());
+                break;
+            }catch (NumberFormatException e){
+                System.out.println("nhập sai");
+            }
+        }while (true);
+
+        String gioiTinh;
+        while (true){
+
+            System.out.println("NHập giới tính công nhân cần thêm mới");
+            gioiTinh =scanner.nextLine();
+            if (gioiTinh.trim().equals("") ){
+                System.out.println("nhập lại");
+            }else {
+                break;
+            }
+        }
         System.out.println("NHập địa chỉ công nhân cần thêm mới");
         String diaChi=scanner.nextLine();
         System.out.println("Nhập cấp bậc công nhân cần thêm mới");
