@@ -1,9 +1,9 @@
-package oop_review.phuong_tien.service.impl;
+package bai_tap_them.service.impl;
 
-import oop_review.phuong_tien.controller.Menu;
-import oop_review.phuong_tien.models.Oto;
-import oop_review.phuong_tien.service.OtoService;
-import oop_review.phuong_tien.utils.RegexData;
+import bai_tap_them.controller.Menu;
+import bai_tap_them.models.Oto;
+import bai_tap_them.service.OtoService;
+import bai_tap_them.utils.RegexData;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ public class OtoImpl implements OtoService {
 
     public void write() {
         try {
-            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\oop_review\\phuong_tien\\data\\oto.csvv");
+            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\bai_tap_them\\data\\oto.csv");
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (Oto oto : otoList) {
                 bufferedWriter.write(oto.getBienKiemSoat() + "," + oto.getHangSanXuat() + "," +
@@ -37,7 +37,7 @@ public class OtoImpl implements OtoService {
 
     public static List<Oto> readerOto() {
         try {
-            FileReader fileReader = new FileReader(new File("D:\\CodeGym\\module_2\\src\\oop_review\\phuong_tien\\data\\oto.csv"));
+            FileReader fileReader = new FileReader(new File("D:\\CodeGym\\module_2\\src\\bai_tap_them\\data\\oto.csv"));
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             String[] temp;

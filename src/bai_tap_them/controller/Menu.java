@@ -1,11 +1,11 @@
-package oop_review.phuong_tien.controller;
+package bai_tap_them.controller;
 
-import oop_review.phuong_tien.service.OtoService;
-import oop_review.phuong_tien.service.XeMayService;
-import oop_review.phuong_tien.service.XeTaiService;
-import oop_review.phuong_tien.service.impl.OtoImpl;
-import oop_review.phuong_tien.service.impl.XeMayImpl;
-import oop_review.phuong_tien.service.impl.XeTaiImpl;
+import bai_tap_them.service.OtoService;
+import bai_tap_them.service.XeMayService;
+import bai_tap_them.service.XeTaiService;
+import bai_tap_them.service.impl.OtoImpl;
+import bai_tap_them.service.impl.XeMayImpl;
+import bai_tap_them.service.impl.XeTaiImpl;
 
 import java.util.Scanner;
 

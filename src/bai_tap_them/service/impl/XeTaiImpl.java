@@ -1,11 +1,8 @@
-package oop_review.phuong_tien.service.impl;
-
-
-import oop_review.phuong_tien.controller.Menu;
-import oop_review.phuong_tien.models.XeTai;
-import oop_review.phuong_tien.service.XeTaiService;
-import oop_review.phuong_tien.utils.RegexData;
-
+package bai_tap_them.service.impl;
+import bai_tap_them.controller.Menu;
+import bai_tap_them.models.XeTai;
+import bai_tap_them.service.XeTaiService;
+import bai_tap_them.utils.RegexData;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +16,7 @@ public class XeTaiImpl implements XeTaiService {
 
     public void write() {
         try {
-            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\oop_review\\phuong_tien\\data\\xetai.csv");
+            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\bai_tap_them\\data\\xetai.csv");
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (XeTai xeTai: xeTaiList) {
                 bufferedWriter.write(xeTai.getBienKiemSoat() + "," + xeTai.getHangSanXuat() + "," +
@@ -36,7 +33,7 @@ public class XeTaiImpl implements XeTaiService {
 
     public static List<XeTai> readerXeTai() {
         try {
-            FileReader fileReader = new FileReader(new File("D:\\CodeGym\\module_2\\src\\oop_review\\phuong_tien\\data\\xetai.csv"));
+            FileReader fileReader = new FileReader(new File("D:\\CodeGym\\module_2\\src\\bai_tap_them\\data\\xetai.csv"));
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             String[] temp;

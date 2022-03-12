@@ -1,4 +1,4 @@
-package oop_review.phuong_tien.models;
+package bai_tap_them.models;
 
 public class XeTai extends PhuongTien{
     private String  trongTai;

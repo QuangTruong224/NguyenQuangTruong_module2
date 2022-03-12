@@ -1,9 +1,9 @@
-package oop_review.phuong_tien.service.impl;
+package bai_tap_them.service.impl;
 
-import oop_review.phuong_tien.controller.Menu;
-import oop_review.phuong_tien.models.XeMay;
-import oop_review.phuong_tien.service.XeMayService;
-import oop_review.phuong_tien.utils.RegexData;
+import bai_tap_them.controller.Menu;
+import bai_tap_them.models.XeMay;
+import bai_tap_them.service.XeMayService;
+import bai_tap_them.utils.RegexData;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class XeMayImpl implements XeMayService {
 
     public void write() {
         try {
-            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\oop_review\\phuong_tien\\data\\semay.csv");
+            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\bai_tap_them\\data\\semay.csv");
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (XeMay xeMay : xeMayList) {
                 bufferedWriter.write(xeMay.getBienKiemSoat() + "," + xeMay.getHangSanXuat() + "," +
@@ -35,7 +35,7 @@ public class XeMayImpl implements XeMayService {
 
     public static List<XeMay> readerXeMay() {
         try {
-            FileReader fileReader = new FileReader(new File("D:\\CodeGym\\module_2\\src\\oop_review\\phuong_tien\\data\\semay.csv"));
+            FileReader fileReader = new FileReader(new File("D:\\CodeGym\\module_2\\src\\bai_tap_them\\data\\semay.csv"));
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             String[] temp;

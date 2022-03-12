@@ -1,4 +1,4 @@
-package oop_review.phuong_tien.service;
+package bai_tap_them.service;
 
 public interface OtoService {
     void addOto();
