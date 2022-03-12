@@ -1,8 +1,7 @@
-package de_on_tao_tu_lam.service.Impl;
+package de_thi_c11.service.Impl;
 
-import de_on_tao_tu_lam.models.BenhAnThuong;
-import de_on_tao_tu_lam.models.BenhAnVip;
-import de_on_tao_tu_lam.service.BenhAnVipService;
+import de_thi_c11.models.BenhAnVip;
+import de_thi_c11.service.BenhAnVipService;
 import oop_review.phuong_tien.controller.Menu;
 
 import java.io.*;

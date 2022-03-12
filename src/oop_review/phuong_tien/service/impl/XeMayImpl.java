@@ -3,30 +3,74 @@ package oop_review.phuong_tien.service.impl;
 import oop_review.phuong_tien.controller.Menu;
 import oop_review.phuong_tien.models.XeMay;
 import oop_review.phuong_tien.service.XeMayService;
+import oop_review.phuong_tien.utils.RegexData;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class xeMayImpl implements XeMayService {
+public class XeMayImpl implements XeMayService {
     static List<XeMay> xeMayList=new ArrayList<>();
+    static {
+        xeMayList = readerXeMay();
+    }
+
+    public void write() {
+        try {
+            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\oop_review\\phuong_tien\\data\\semay.csv");
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (XeMay xeMay : xeMayList) {
+                bufferedWriter.write(xeMay.getBienKiemSoat() + "," + xeMay.getHangSanXuat() + "," +
+                        xeMay.getNamSanXuat() + "," + xeMay.getChuSoHuu() + "," +
+                        xeMay.getCongSuat());
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+
+    }
+
+    public static List<XeMay> readerXeMay() {
+        try {
+            FileReader fileReader = new FileReader(new File("D:\\CodeGym\\module_2\\src\\oop_review\\phuong_tien\\data\\semay.csv"));
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            String[] temp;
+            while ((line = bufferedReader.readLine()) != null) {
+                temp = line.split(",");
+                XeMay xeMay = new XeMay(temp[0],temp[1],(temp[2]),temp[3],temp[4]);
+                xeMayList.add(xeMay);
+
+            }
+            bufferedReader.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        return xeMayList;
+
+    }
     @Override
     public void addXeMay() {
 //        String bienKiemSoat, String hangSanXuat,
 //        int namSanXuat, String chuSoHuu, String congSuat
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập biển kiểm soát:");
-        String bienKiemSoat = scanner.nextLine();
+        String bienKiemSoat = RegexData.checkBienSoXeMay();
         System.out.println("Hãng sản xuất:");
         String hangSanXuat = scanner.nextLine();
         System.out.println("Năm sản xuất:");
-        int namSanXuat = Integer.parseInt(scanner.nextLine());
+        String namSanXuat = scanner.nextLine();
         System.out.println("CHủ sỡ hữu:");
         String chuSoHuu = scanner.nextLine();
         System.out.println("Công suất xe;");
         String congSuatXe=scanner.nextLine();
         XeMay xeMay=new XeMay(bienKiemSoat,hangSanXuat,namSanXuat,chuSoHuu,congSuatXe);
         xeMayList.add(xeMay);
+        write();
     }
 
     @Override
@@ -55,6 +99,7 @@ public class xeMayImpl implements XeMayService {
             }
 
         }
+        write();
     }
 
     @Override

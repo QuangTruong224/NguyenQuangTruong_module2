@@ -3,9 +3,9 @@ package oop_review.phuong_tien.controller;
 import oop_review.phuong_tien.service.OtoService;
 import oop_review.phuong_tien.service.XeMayService;
 import oop_review.phuong_tien.service.XeTaiService;
-import oop_review.phuong_tien.service.impl.otoImpl;
-import oop_review.phuong_tien.service.impl.xeMayImpl;
-import oop_review.phuong_tien.service.impl.xeTaiImpl;
+import oop_review.phuong_tien.service.impl.OtoImpl;
+import oop_review.phuong_tien.service.impl.XeMayImpl;
+import oop_review.phuong_tien.service.impl.XeTaiImpl;
 
 import java.util.Scanner;
 
@@ -52,9 +52,9 @@ public class Menu {
     }
 
     public static void addNew() {
-        OtoService otoService = new otoImpl();
-        XeMayService xeMayService = new xeMayImpl();
-        XeTaiService xeTaiService = new xeTaiImpl();
+        OtoService otoService = new OtoImpl();
+        XeMayService xeMayService = new XeMayImpl();
+        XeTaiService xeTaiService = new XeTaiImpl();
         boolean check = true;
         int choice = 0;
         while (check) {
@@ -79,6 +79,7 @@ public class Menu {
                     break;
                 case 3:
                     xeTaiService.addXeTai();
+                    break;
                 case 4:
                     displayMenu();
                     break;
@@ -91,9 +92,9 @@ public class Menu {
     public static void display() {
         boolean check = true;
         int choice = 0;
-        OtoService otoService = new otoImpl();
-        XeMayService xeMayService = new xeMayImpl();
-        XeTaiService xeTaiService = new xeTaiImpl();
+        OtoService otoService = new OtoImpl();
+        XeMayService xeMayService = new XeMayImpl();
+        XeTaiService xeTaiService = new XeTaiImpl();
         while (check) {
             System.out.println("1.  Hiển thị oto ");
             System.out.println("2.  Hiển thị xe máy ");
@@ -128,9 +129,9 @@ public class Menu {
     public static void delete() {
         boolean check = true;
         int choice = 0;
-        OtoService otoService = new otoImpl();
-        XeMayService xeMayService = new xeMayImpl();
-        XeTaiService xeTaiService = new xeTaiImpl();
+        OtoService otoService = new OtoImpl();
+        XeMayService xeMayService = new XeMayImpl();
+        XeTaiService xeTaiService = new XeTaiImpl();
         while (check) {
             System.out.println("1. xóa oto ");
             System.out.println("2.  xóa xe máy ");

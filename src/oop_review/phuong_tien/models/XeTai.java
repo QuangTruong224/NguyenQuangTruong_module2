@@ -6,7 +6,7 @@ public class XeTai extends PhuongTien{
     public XeTai() {
     }
 
-    public XeTai(String bienKiemSoat, String hangSanXuat, int namSanXuat, String chuSoHuu, String trongTai) {
+    public XeTai(String bienKiemSoat, String hangSanXuat, String namSanXuat, String chuSoHuu, String trongTai) {
         super(bienKiemSoat, hangSanXuat, namSanXuat, chuSoHuu);
         this.trongTai = trongTai;
     }

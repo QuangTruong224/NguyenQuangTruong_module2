@@ -1,4 +1,4 @@
-package de_on_tao_tu_lam.models;
+package de_thi_c11.models;
 
 public  abstract class BenhAn {
     private  int soThuTu;

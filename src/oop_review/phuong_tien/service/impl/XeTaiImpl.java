@@ -4,31 +4,75 @@ package oop_review.phuong_tien.service.impl;
 import oop_review.phuong_tien.controller.Menu;
 import oop_review.phuong_tien.models.XeTai;
 import oop_review.phuong_tien.service.XeTaiService;
+import oop_review.phuong_tien.utils.RegexData;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class xeTaiImpl implements XeTaiService {
+public class XeTaiImpl implements XeTaiService {
     static List<XeTai> xeTaiList = new ArrayList<>();
+    static {
+        xeTaiList = readerXeTai();
+    }
+
+    public void write() {
+        try {
+            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\oop_review\\phuong_tien\\data\\xetai.csv");
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (XeTai xeTai: xeTaiList) {
+                bufferedWriter.write(xeTai.getBienKiemSoat() + "," + xeTai.getHangSanXuat() + "," +
+                        xeTai.getNamSanXuat() + "," + xeTai.getChuSoHuu() + "," +
+                        xeTai.getTrongTai());
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+
+    }
+
+    public static List<XeTai> readerXeTai() {
+        try {
+            FileReader fileReader = new FileReader(new File("D:\\CodeGym\\module_2\\src\\oop_review\\phuong_tien\\data\\xetai.csv"));
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            String[] temp;
+            while ((line = bufferedReader.readLine()) != null) {
+                temp = line.split(",");
+                XeTai xeTai = new XeTai(temp[0],temp[1],(temp[2]),temp[3],temp[4]);
+                xeTaiList.add(xeTai);
+
+            }
+            bufferedReader.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        return xeTaiList;
+
+    }
 
     @Override
     public void addXeTai() {
 //        String bienKiemSoat, String hangSanXuat,
 //        int namSanXuat, String chuSoHuu, String trongTai
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập biển kiểm soat:");
-        String bienKiemSoat = scanner.nextLine();
+        String bienKiemSoat = RegexData.checkBienSoXeTai();
         System.out.println("Hãng sản xuất:");
         String hangXanSuat = scanner.nextLine();
         System.out.println("Năm sản xuất :");
-        int namSanXuat = Integer.parseInt(scanner.nextLine());
+        String namSanXuat = scanner.nextLine();
         System.out.println("CHủ sở hữu:");
         String chuSoHuu = scanner.nextLine();
         System.out.println("Trọng tải xe :");
         String trongTai = scanner.nextLine();
         XeTai xeTai = new XeTai(bienKiemSoat, hangXanSuat, namSanXuat, chuSoHuu, trongTai);
         xeTaiList.add(xeTai);
+        write();
     }
 
     @Override
@@ -56,7 +100,7 @@ public class xeTaiImpl implements XeTaiService {
             }
 
 
-        }
+        }write();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package de_on_tao_tu_lam.models;
+package de_thi_c11.models;
 
 public class BenhAnVip extends BenhAn {
     private String loaiVip;

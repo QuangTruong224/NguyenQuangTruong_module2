@@ -3,13 +3,13 @@ package oop_review.phuong_tien.models;
 public abstract class PhuongTien {
     private String bienKiemSoat;
     private String hangSanXuat;
-    private int namSanXuat;
+    private String namSanXuat;
     private String chuSoHuu;
 
     public PhuongTien() {
     }
 
-    public PhuongTien(String bienKiemSoat, String hangSanXuat, int namSanXuat, String chuSoHuu) {
+    public PhuongTien(String bienKiemSoat, String hangSanXuat, String namSanXuat, String chuSoHuu) {
         this.bienKiemSoat = bienKiemSoat;
         this.hangSanXuat = hangSanXuat;
         this.namSanXuat = namSanXuat;
@@ -32,11 +32,11 @@ public abstract class PhuongTien {
         this.hangSanXuat = hangSanXuat;
     }
 
-    public int getNamSanXuat() {
+    public String getNamSanXuat() {
         return namSanXuat;
     }
 
-    public void setNamSanXuat(int namSanXuat) {
+    public void setNamSanXuat(String namSanXuat) {
         this.namSanXuat = namSanXuat;
     }
 

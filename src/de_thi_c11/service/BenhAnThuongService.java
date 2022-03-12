@@ -1,4 +1,4 @@
-package de_on_tao_tu_lam.service;
+package de_thi_c11.service;
 
 public interface BenhAnThuongService {
     void addBenhAnThuong();

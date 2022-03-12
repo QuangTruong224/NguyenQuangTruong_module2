@@ -4,10 +4,10 @@ public class Oto extends PhuongTien {
     private int soChoNgoi;
     private String kieuXe;
 
-    public Oto() {
+    public Oto(String bienKiemSoat, String loaiXe, String hangSanXuat, String namSanXuat, String chuSoHuu, int soChoNgoi, String kieuXe) {
     }
 
-    public Oto(String bienKiemSoat, String hangSanXuat, int namSanXuat, String chuSoHuu, int soChoNgoi, String kieuXe) {
+    public Oto(String bienKiemSoat, String hangSanXuat, String namSanXuat, String chuSoHuu, int soChoNgoi, String kieuXe) {
         super(bienKiemSoat, hangSanXuat, namSanXuat, chuSoHuu);
         this.soChoNgoi = soChoNgoi;
         this.kieuXe = kieuXe;

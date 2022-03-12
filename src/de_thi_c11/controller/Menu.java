@@ -1,9 +1,9 @@
-package de_on_tao_tu_lam.controller;
+package de_thi_c11.controller;
 
-import de_on_tao_tu_lam.service.BenhAnThuongService;
-import de_on_tao_tu_lam.service.BenhAnVipService;
-import de_on_tao_tu_lam.service.Impl.BenhAnThuongImpl;
-import de_on_tao_tu_lam.service.Impl.BenhAnVipImpl;
+import de_thi_c11.service.BenhAnThuongService;
+import de_thi_c11.service.BenhAnVipService;
+import de_thi_c11.service.Impl.BenhAnThuongImpl;
+import de_thi_c11.service.Impl.BenhAnVipImpl;
 
 
 import java.util.Scanner;
