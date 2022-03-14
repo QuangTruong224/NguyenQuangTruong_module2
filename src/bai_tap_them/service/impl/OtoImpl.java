@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class OtoImpl implements OtoService {
-//    private static final String REGEX_BIENSO = "^\\d{2}[A]\\-\\d{3}\\.\\d{2}$";
+    //    private static final String REGEX_BIENSO = "^\\d{2}[A]\\-\\d{3}\\.\\d{2}$";
     static List<Oto> otoList = new ArrayList<>();
 
     static {
@@ -25,7 +25,7 @@ public class OtoImpl implements OtoService {
             for (Oto oto : otoList) {
                 bufferedWriter.write(oto.getBienKiemSoat() + "," + oto.getHangSanXuat() + "," +
                         oto.getNamSanXuat() + "," + oto.getChuSoHuu() + "," +
-                        oto.getSoChoNgoi() + "," + oto.getKieuXe());
+                        oto.getSoChoNgoi() + "," + oto.getKieuXe() + "," + oto.getLoaiXe());
                 bufferedWriter.newLine();
             }
             bufferedWriter.close();
@@ -43,7 +43,7 @@ public class OtoImpl implements OtoService {
             String[] temp;
             while ((line = bufferedReader.readLine()) != null) {
                 temp = line.split(",");
-                Oto oto = new Oto(temp[0], temp[1], (temp[2]), temp[3], Integer.parseInt(temp[4]), temp[5]);
+                Oto oto = new Oto(temp[0], temp[1], temp[2], temp[3], temp[4], Integer.parseInt(temp[5]), temp[6]);
                 otoList.add(oto);
 
             }
@@ -63,8 +63,8 @@ public class OtoImpl implements OtoService {
 //        String bienKiemSoat, String hangSanXuat, String namSanXuat,
 //        String chuSoHuu, int soChoNgoi, String kieuXe
 
-        System.out.println("1.Xe khách");
-        System.out.println("2.Xe du lịch");
+        System.out.println("1.Xe khách thì nhập biển B");
+        System.out.println("2.Xe du lịch thì nhập biển A");
         String loaiXe = " ";
         int choose = 0;
         try {
@@ -74,16 +74,13 @@ public class OtoImpl implements OtoService {
         }
         switch (choose) {
             case 1:
-                loaiXe="Xe khách";
+                loaiXe = "Xe khách";
                 break;
             case 2:
-                loaiXe="Xe du lịch";
+                loaiXe = "Xe du lịch";
                 break;
         }
         String bienKiemSoat = RegexData.checkBienSoOto();
-
-
-
         System.out.println("Hãng sản xuất:");
         String hangSanXuat = scanner.nextLine();
         System.out.println("Năm sản xuất:");
