@@ -9,13 +9,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BenhAnVipImpl implements BenhAnVipService {
-  static   List<BenhAnVip> benhAnVipList=new ArrayList<>();
-    static {
-        benhAnVipList=readerBenhAnVip();
-    }
-    public void write(){
+//  static   List<BenhAnVip> benhAnVipList=new ArrayList<>();
+//    static {
+//        benhAnVipList=readerBenhAnVip();
+//    }
+    public void write(List<BenhAnVip>benhAnVipList,boolean append){
         try {
-            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\de_on_tao_tu_lam\\data\\benhanvip.csv");
+            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\de_on_tao_tu_lam\\data\\benhanvip.csv",append);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (BenhAnVip benhAnVip : benhAnVipList){
                 bufferedWriter.write(benhAnVip.getSoThuTu()+","+benhAnVip.getMaBenhAn()+","+
@@ -30,6 +30,7 @@ public class BenhAnVipImpl implements BenhAnVipService {
 
     }
     public static  List<BenhAnVip> readerBenhAnVip() {
+        List<BenhAnVip>benhAnVipList=new ArrayList<>();
            try{ FileReader fileReader = new FileReader(new File("D:\\CodeGym\\module_2\\src\\de_on_tao_tu_lam\\data\\benhanvip.csv"));
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
@@ -51,9 +52,16 @@ public class BenhAnVipImpl implements BenhAnVipService {
 
     @Override
     public void addBenhAnVip() {
+        List<BenhAnVip> benhAnVipList=readerBenhAnVip();
         Scanner scanner=new Scanner(System.in);
-        System.out.println("Thêm số thứ tự mới");
-        int soThuTu=Integer.parseInt(scanner.nextLine());
+        int soThuTu;
+        if (benhAnVipList.size()==0) {
+            soThuTu=1;
+        }else {
+            soThuTu=benhAnVipList.get(benhAnVipList.size()-1).getSoThuTu()+1;
+        }
+//        System.out.println("Thêm số thứ tự mới");
+//        int soThuTu= Integer.parseInt(scanner.nextLine());
         System.out.println("Thêm bã bệnh án mới");
         String maBenhAn=scanner.nextLine();
         System.out.println("Thêm tên bệnh nhân mới");
@@ -90,11 +98,12 @@ public class BenhAnVipImpl implements BenhAnVipService {
         String thoiHanVip=scanner.nextLine();
         BenhAnVip benhAnVip=new BenhAnVip(soThuTu,maBenhAn,tenBenhNhan,ngayNhapVien,ngayRaVien,lyDoNhapVien,loaiVip,thoiHanVip);
        benhAnVipList.add(benhAnVip);
-write();
+write(benhAnVipList,true);
     }
 
     @Override
     public void deleteBenhAnVip() {
+        List<BenhAnVip> benhAnVipList=readerBenhAnVip();
         boolean check = false;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập mã bệnh án cần xóa");
@@ -119,11 +128,12 @@ write();
             }
 
         }
-        write();
+        write(benhAnVipList,false);
     }
 
     @Override
     public void displayBenhAnVip() {
+        List<BenhAnVip> benhAnVipList=readerBenhAnVip();
             for (BenhAnVip benhAnVip:benhAnVipList
                  ) {
                 System.out.println(benhAnVip);

@@ -5,7 +5,7 @@
 //import java.util.regex.Matcher;
 //import java.util.regex.Pattern;
 //
-//public class Validate {
+//public class RegexData {
 //    Scanner scanner = new Scanner(System.in);
 //
 //    public static String birthDate() {

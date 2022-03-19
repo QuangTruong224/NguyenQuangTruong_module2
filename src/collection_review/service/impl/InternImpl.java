@@ -12,7 +12,7 @@ public class InternImpl implements InternService {
 
     @Override
     public void addIntern() {
-//        Validate validate = new Validate();
+//        RegexData validate = new RegexData();
 //        int candidateId, String name, String birthDate, String adress,
 //        int phone, String email, String majors, String semeter, String universityName
         Scanner scanner=new Scanner(System.in);

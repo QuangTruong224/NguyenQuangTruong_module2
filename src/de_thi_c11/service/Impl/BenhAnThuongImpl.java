@@ -9,15 +9,15 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BenhAnThuongImpl implements BenhAnThuongService {
-    static List<BenhAnThuong> benhAnThuongList = new ArrayList<>();
+//    static List<BenhAnThuong> benhAnThuongList = new ArrayList<>();
+//
+//    static {
+//        benhAnThuongList = readerBenhAnThuong();
+//    }
 
-    static {
-        benhAnThuongList = readerBenhAnThuong();
-    }
-
-    public void write() {
+    public void write(List<BenhAnThuong> benhAnThuongList,boolean append) {
         try {
-            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\de_on_tao_tu_lam\\data\\benhanthuong.csv");
+            FileWriter fileWriter = new FileWriter("D:\\CodeGym\\module_2\\src\\de_on_tao_tu_lam\\data\\benhanthuong.csv",append);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (BenhAnThuong benhAnThuong : benhAnThuongList) {
                 bufferedWriter.write(benhAnThuong.getSoThuTu() + "," + benhAnThuong.getMaBenhAn() + "," +
@@ -34,6 +34,7 @@ public class BenhAnThuongImpl implements BenhAnThuongService {
     }
 
     public static List<BenhAnThuong> readerBenhAnThuong() {
+        List<BenhAnThuong> benhAnThuongList=new ArrayList<>();
         try {
             FileReader fileReader = new FileReader(new File("D:\\CodeGym\\module_2\\src\\de_on_tao_tu_lam\\data\\benhanthuong.csv"));
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -58,11 +59,18 @@ public class BenhAnThuongImpl implements BenhAnThuongService {
 
     @Override
     public void addBenhAnThuong() {
+        List<BenhAnThuong>benhAnThuongList=readerBenhAnThuong();
 //        int soThuTu, String maBenhAn, String tenBenhNhan,
 //        String ngayNhapVien, String ngayRaVien, String lyDoNhapVien, int phiNamVien
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Thêm số thứ tự mới");
-        int soThuTu = Integer.parseInt(scanner.nextLine());
+//        System.out.println("Thêm số thứ tự mới");
+//        int soThuTu = Integer.parseInt(scanner.nextLine());
+        int soThuTu;
+        if (benhAnThuongList.size()==0) {
+            soThuTu=1;
+        }else {
+            soThuTu=benhAnThuongList.get(benhAnThuongList.size()-1).getSoThuTu()+1;
+        }
         System.out.println("Thêm bã bệnh án mới");
         String maBenhAn = scanner.nextLine();
         System.out.println("Thêm tên bệnh nhân mới");
@@ -77,11 +85,12 @@ public class BenhAnThuongImpl implements BenhAnThuongService {
         int phiNamVien = Integer.parseInt(scanner.nextLine());
         BenhAnThuong benhAnThuong = new BenhAnThuong(soThuTu, maBenhAn, tenBenhNhan, ngayNhapVien, ngayRaVien, lyDoNhapVien, phiNamVien);
         benhAnThuongList.add(benhAnThuong);
-        write();
+        write(benhAnThuongList,true);
     }
 
     @Override
     public void deleteBenhAnThuong() {
+        List<BenhAnThuong> benhAnThuongList=readerBenhAnThuong();
         boolean check = false;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập mã bệnh án cần xóa");
@@ -105,11 +114,12 @@ public class BenhAnThuongImpl implements BenhAnThuongService {
                 }
             }
         }
-        write();
+        write(benhAnThuongList,false);
     }
 
     @Override
     public void displayBenhAnThuong() {
+        List<BenhAnThuong> benhAnThuongList=readerBenhAnThuong();
         for (BenhAnThuong benhAnThuong : benhAnThuongList) {
             System.out.println(benhAnThuong);
         }

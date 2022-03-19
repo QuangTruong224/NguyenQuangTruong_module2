@@ -12,7 +12,7 @@ public class FresherImpl implements FresherService {
 
     @Override
     public void addFresh() {
-//        Validate validate = new Validate();
+//        RegexData validate = new RegexData();
 //        int candidateId, String name, String birthDate, String adress, int phone,
 //        String email, int graduationDate, String graduationRank, String education
         Scanner scanner = new Scanner(System.in);

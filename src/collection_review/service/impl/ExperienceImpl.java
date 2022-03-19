@@ -2,7 +2,7 @@ package collection_review.service.impl;
 
 import collection_review.models.Experience;
 import collection_review.service.ExperienceService;
-//import collection_review.utils.Validate;
+//import collection_review.utils.RegexData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +10,11 @@ import java.util.Scanner;
 
 public class ExperienceImpl implements ExperienceService {
     static List<Experience> experienceList = new ArrayList<>();
-//    Validate  validate = new Validate();
+//    RegexData  validate = new RegexData();
 
     @Override
     public void addExperience() {
-//        Validate validate = new Validate();
+//        RegexData validate = new RegexData();
 //        int candidateId, String name, String birthDate,
 //        String adress, int phone, String email, int yearOfExperience,
 //        String professionalSkill

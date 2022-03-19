@@ -1,0 +1,3 @@
+Booking{maBooking='A123', ngayBatDau='14/03/2022', ngayKetThuc='21/03/2022', maKhachHang='A1234567', tenDichVu='Villa', loaiDichVu='Vip'}
+Booking{maBooking='A234', ngayBatDau='15/03/2022', ngayKetThuc='22/03/2022', maKhachHang='A1234568', tenDichVu='Room', loaiDichVu='Vip'}
+Booking{maBooking='A456', ngayBatDau='16/03/2022', ngayKetThuc='23/03/2022', maKhachHang='A1234569', tenDichVu='House', loaiDichVu='Vip'}
